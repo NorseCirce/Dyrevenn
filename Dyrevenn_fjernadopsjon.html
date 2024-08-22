@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrevenn Vestfold</title>
+    <link rel="stylesheet" href="Dyrevenn_frame.css">
+    <link rel="stylesheet" href="Dyrevenn_fjernadopsjon.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/idb@5.0.4/build/iife/index-min.js"></script>
+
+</head>
+<body>
+<div class="wrapper" data-max-bottom="0.2">
+    <header>
+        <div class="header-content">
+            <p>
+                <a href="https://www.facebook.com/Dyrevenn.Vestfold" class="header_name"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/dyrevenn_vestfold/" class="header_name"><i class="fab fa-instagram"></i></a>
+            </p>
+            <p>
+                <a href="tel:453 82 272"><i class="material-icons">phone</i> 453 82 272</a>
+            </p>
+            <p>
+                <a href="mailto:post@dyrevennvestfold.no"><i class="material-icons">&#9993;</i> post@dyrevennvestfold.no</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="top">
+        <a class="top_name" href="Dyrevenn_homepage.html">Dyrevenn<br>Vestfold</a>
+        <a href="Dyrevenn_homepage.html"><img src="Images/logo.png" alt="Logo" class="top_logo"></a>
+        <div class="top_square_L"></div> 
+        <div class="top_square"></div>
+        <div class="top_square_R"></div>
+        <nav class="navbar">
+            <a href="#home"></a>
+            <div class="dropdown">
+                <button class="dropbtn">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="Dyrevenn_adopsjon.html">Adopsjon</a>
+                    <a href="Dyrevenn_fjernadopsjon.html">Fjernadopsjon</a>
+                    <a href="Dyrevenn_omplassering.html">Omplassering</a>
+                    <a href="Dyrevenn_memorial.html">Minneside</a>
+                    <a href="Dyrevenn_støtt-oss.html">Støtt oss</a>
+                    <a href="Dyrevenn_om-oss.html">Om oss</a>
+                    <a href="Dyrevenn_kontakt.html">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+
+
+    <main>
+        <section class="fjernadopsjon"><h1>Fjernadopsjon</h1></section>
+    
+        <section class="fjernadopsjon-info">
+        <div class="left">
+            <p>
+                Dyrevenn Vestfold hjelper stadig flere katter, derav mange som ofte er i dårlig tilstand ved ankomst.<br>
+                Vi gir dem en ny sjanse med veterinærens godkjenning og tar også imot katter som trenger tid og omsorg for å bli trygge etter lite menneskekontakt.<br>
+                Disse trenger ofte lang tid for å bli trygge, og må ofte være på hjelpesenteret eller i fosterhjem i flere måneder før de kan adopteres.<br>
+            </p>
+            <img src="Images/DSC08311.jpg">
+        </div>
+        <div class="right">
+            <img src="Images/IMG_4859.jpg">
+            <p>
+                For å finansiere arbeidet tilbyr vi fjernadopsjon. <br>
+                Støtt en katt på hjelpesenteret vårt med et månedlig bidrag på minst 50 kr. 
+                Ditt bidrag gir nødvendig medisinsk behandling og sosialisering.<br>
+                Som fjernadoptør får du et adopsjonsbevis og oppdateringer om kattens utvikling. 
+                Hvis katten blir adoptert, kan du velge en ny katt å støtte eller avslutte avtalen.
+            </p>
+            
+        </div>
+            
+        </section> 
+    
+        <section class="katter_til_fjernadopsjon">
+            <p>Katter til fjernadopsjon</p>
+            <div id="cat-display" class="cat-info cat-container"></div>
+            <script src="Dyrevenn_fjernadopsjon.js"></script>
+        </section>
+    
+        <section id="kontakt-oss-wrapper">
+            <img src="Images/IMG_4861.jpg" alt="Contact Cat Image" id="kontakt-oss-image">
+            <div id="kontakt-oss">
+                <h2>Kontakt oss</h2>
+                <form id="contact-form">
+                    <label for="navn">Navn *</label>
+                    <input type="text" id="navn" name="navn" required>
+        
+                    <label for="email">E-post *</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="land">Land *</label>
+                    <input type="text" id="land" name="land" required>
+        
+                    <label for="by">By *</label>
+                    <input type="text" id="by" name="by" required>
+        
+                    <label for="adresse">Adresse</label>
+                    <input type="text" id="adresse" name="adresse">
+        
+                    <label for="telefonnummer">Telefonnummer *</label>
+                    <input type="tel" id="telefonnummer" name="telefonnummer" required>
+        
+                    <label for="belop">Ønsket beløp. Minimum 50,- per katt.</label>
+                    <input type="number" id="belop" name="belop" min="50" required>
+        
+                    <label for="ny-eller-avslutt">Vil du hjelpe en ny katt eller avslutte når din katt blir adoptert ut?</label>
+                    <select id="ny-eller-avslutt" name="ny-eller-avslutt" required>
+                        <option value="ny-katt">Ny katt</option>
+                        <option value="avslutte">Avslutte</option>
+                    </select>
+        
+                    <label for="bevis">Ønsker du fjernadopsjonsbevis per post eller e-post?</label>
+                    <select id="bevis" name="bevis" required>
+                        <option value="post">Post</option>
+                        <option value="email">E-post</option>
+                    </select>
+        
+                    <label for="katt">Hvilken katt ønsker du?</label>
+                    <select id="katt" name="katt" required>
+                        <option value="">Velg en katt</option>
+                    </select>
+        
+                    <fieldset>
+                        <div class="checkbox-container">
+                            <label for="terms">I accept the terms *</label>
+                            <input type="checkbox" id="terms" name="terms" required>
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="newsletters">I want to receive newsletters</label>
+                            <input type="checkbox" id="newsletters" name="newsletters">
+                        </div>
+                    </fieldset>
+        
+                    <button type="button" onclick="sendEmail()">Send inn og få en katt</button>
+                </form>
+                <div id="form-result"></div>
+            </div>
+        </section>
+        
+        <section class="bottom">
+            <img class="image_bottom" src="Images/cat1.png">
+            <div class="bottom-content">
+                <div class="info">
+                    <a href="https://www.google.com/maps/place/Roveveien+174,+3233+Sandefjord/@59.1675245,10.2944841,17z/data=!3m1!4b1!4m6!3m5!1s0x4646b9ee8cdee1eb:0x12a91f2526f001c!8m2!3d59.1675245!4d10.297059!16s%2Fg%2F11qn0gwj80?entry=ttu">
+                        <i class="material-icons">&#xe55f;</i> Roveveien 174, Sandefjord
+                    </a><br>
+                    <a href="tel:453 82 272">
+                        <i class="material-icons">phone</i> 453 82 272
+                    </a><br>
+                    <a href="mailto:post@dyrevennvestfold.no">
+                        <i class="material-icons">&#9993;</i> post@dyrevennvestfold.no
+                    </a><br>
+                </div>
+    
+                <div class="open_times">
+                    <a>Åpningstider</a><br>
+                    <a>Tirsdag: <span>17:00 – 19:00</span></a><br>
+                    <a>Torsdag: <span>17:00 – 19:00</span></a>
+                </div>
+    
+                <div class="web_pages">
+                    <a href="https://www.facebook.com/Dyrevenn.Vestfold">
+                        <img src="Images/facebook.png" alt="Facebook logo, click to go to our Facebook page">
+                    </a>
+                    <a href="https://www.instagram.com/dyrevenn_vestfold/">
+                        <img src="Images/instagram.png" alt="Instagram logo, click to go to our Instagram page">
+                    </a>
+                    <div class="bottom_dropdown">
+                        <img src="Images/dropdown.png" alt="Menu" class="bottom_dropbtn">
+                        <div class="bottom_dropdown-content">
+                            <a href="Dyrevenn_adopsjon.html">Adopsjon</a>
+                            <a href="Dyrevenn_fjernadopsjon.html">Fjernadopsjon</a>
+                            <a href="Dyrevenn_omplassering.html">Omplassering</a>
+                            <a href="Dyrevenn_memorial.html">Minneside</a>
+                            <a href="Dyrevenn_støtt-oss.html">Støtt oss</a>
+                            <a href="Dyrevenn_om-oss.html">Om oss</a>
+                            <a href="Dyrevenn_kontakt.html">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_square_L"></div>
+            <div class="bottom_square_R"></div>
+        </section>
+    </main>
+    
+    
+
+
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <p></p>
+        <p>&#169; Norse_Circe 2024.</p>
+        <p></p>
+    </div>    
+</footer>
+</div>
+ 
+<button id="toTopBtn" onclick="scrollToTop()"><img src="Images/Paw.png"><a>Top</a></button>
+
+<script src="Dyrevenn_frame.js"></script>
+</body>
+</html>

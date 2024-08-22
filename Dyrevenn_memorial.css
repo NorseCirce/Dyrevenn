@@ -1,0 +1,109 @@
+:root { 
+    --detail: Black;
+    --detail2: black;
+    --main1: #e5e4e3;
+    --main2: #73151b;
+    --main3: #231862;
+}
+
+body{
+    background-color: var(--detail);
+    background-image: url(Images/star_sky.png);
+}
+main{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottom{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: -5%;
+}
+.bottom_square_L {
+    left: 2vw;
+}
+.bottom_square_R {
+    right: -7vw;
+}
+
+
+.memorial{
+    color: var(--main1);
+    width: 100%;
+    background-image: url(Images/ghost_cat.png);
+    height: 36vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-top: -6vw;
+    box-shadow: 0 10px 30px var(--detail);
+    max-height: 550px;
+    
+}
+.memorial h1{
+    margin-left: 2%;
+    padding-top: 9vw;
+    font-size:clamp(1px, 5.5vw, 40px);
+    margin-bottom: 0;
+}
+.memorial p{
+    margin-left: 2%;
+    margin-top: 1vw;
+    margin-bottom: 2px;
+    width: 70%;
+    font-size:clamp(1px, 2vw, 30px);
+}
+
+.cat-element {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.cat-image {
+    width: 30vw;
+    height: 30vw;
+    max-width: 400px;
+    max-height: 400px;
+    min-height: 150px;
+    min-width: 150px;
+    object-fit: cover;
+    border-radius: 10%;
+    filter: brightness(70%);
+    border:1vw solid var(--detail);
+}
+.cat-name {
+    position: absolute;
+    bottom: clamp(1px, 2.5vw, 35px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.493);
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: bold;
+    z-index: 1;
+    font-size: clamp(17px, 2.5vw, 40px);
+}
+.cat_life{
+    position: absolute;
+    bottom: 0;
+    margin-top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.493);
+    border-radius: 3px;
+    font-weight: bold;
+    z-index: 1;
+    font-size: clamp(10px, 2vw, 30px);
+    width: 70%;
+} 
+@media (max-width: 600px){
+.cats{
+   min-height: 63vh; 
+}
+
+}

@@ -1,0 +1,432 @@
+:root { 
+    --detail: Black;
+    --detail2: black;
+    --main1: #e5e4e3;
+    --main2: #73151b;
+    --main3: #231862;
+}
+
+
+
+
+/*Kort info*/
+.støtt_oss{
+    width: 100%;
+    background-image: url(Images/20240723_192028.jpg);
+    height: 28vw;
+    background-position: center top 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-top: -10vw;
+}
+.støtt_oss h1{ 
+    padding-top: 12vw;
+    padding-left: 65%;
+    font-size:clamp(1px, 5.5vw, 90px);
+    text-shadow:5px 5px 20px #ffffff, -5px -5px 20px #ffffff , 5px -5px 20px #fff, -5px 5px 20px #ffffff;
+}
+
+/*Økonomisk støtte*/
+.økonomisk .text{
+    font-size: clamp(12px,2vw,30px);
+}
+.økonomisk{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 1200px;
+    margin-top: 2vw;
+    margin-bottom: -5%;
+}
+.økonomisk h1{
+    margin-bottom: -2%;
+}
+.økonomisk img{
+    width: 40vw;
+    height: 17vw;
+    object-fit: cover;
+    margin-left: 2%;
+    border-radius: 10%;
+}
+.here{
+    font-weight: normal;
+    color: black;
+    text-decoration-thickness: 1px;
+}
+.here:hover{
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+}
+li a{
+    font-weight: bold;
+}
+ul li{
+    margin-right: -30%;
+    margin-left: -3%;
+}
+@media (min-width: 1400px){
+    .økonomisk .text{
+        margin-right: 15%;
+    }
+    .økonomisk{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        max-width: 1400px;
+        margin-top: 2vw;
+        margin-bottom: -4%;
+    }
+    .økonomisk img{
+        margin-top: 5%;
+        margin-right: -5%;
+        margin-left: 3%;
+        width: 20vw;
+        height: 40vw;
+        object-fit: cover;
+    }
+    li a{
+        font-weight: bold;
+    }
+}
+@media (max-width: 600px){
+    .økonomisk{
+        width: 90%;
+        margin-right: 3%;
+    }
+    .økonomisk .text{
+        text-align: center;
+    }
+    .økonomisk .text h1{
+        margin-bottom: -3%;
+    }
+    .økonomisk img{
+        width: 0vw;
+        height: 0vw;
+    }
+    ul li{
+        margin-right: 0%;
+        margin-left: -10%;
+        text-align: left;
+        margin-bottom: 2.5%;
+    }
+}
+
+/*Medlem*/
+.medlem {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(15px, 2vw, 30px);
+    max-width: 1200px;
+}
+.medlem h1 {
+    text-align: center;
+    margin-top: 5%;
+}
+.medlem ul {
+    margin-left: 2%;
+    margin-top: -2%;
+}
+.medlem ul ul {
+    margin-left: 1%;
+    margin-top: 0%;
+    margin-bottom: -1%;
+    font-size: clamp(14px, 2vw, 18px);
+}
+.medlem ul ul li{
+    font-size: clamp(14px, 1.8vw, 24px);
+}
+.medlem p:nth-of-type(2) {
+    font-weight: bold;
+}
+.medlemer{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 1200px;
+}
+.medlemer img{
+    width: 40vw;
+    height: 30vw;
+    object-fit: cover;
+    margin-left: 2%;
+    border-radius: 10%;
+}
+@media (min-width: 1400px) {
+    .medlemer{
+margin-left: -2%;
+    }
+    .medlem ul {
+        margin-left: 4%;
+        margin-top: -1%;
+    }
+    .medlemer img{
+        width: 40vw;
+        height: 30vw;
+        object-fit: cover;
+        margin-right: -7%;
+        border-radius: 10%;
+    }
+    .last {
+        text-align: center;
+        margin-top: 2%;
+    }
+}
+@media (max-width: 600px) {
+    .medlemer{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display:block;
+        max-width: 1200px;
+        text-align: center;
+    }
+    .medlemer img{
+        width: 65%;
+        height: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+    .medlem ul {
+        margin-left: 0%;
+        margin-top: -3%;
+        text-align: left;
+    }
+    .medlem ul li {
+        margin-top: -2%;
+    }
+    .medlem ul li ul li{
+        margin-left: -9%;
+        margin-top: 1%;
+
+        margin-bottom: -1%;
+    }
+    .last {
+        text-align: center;
+        margin-top: 0%;
+    }
+}
+.toggle-btn {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    font-size: clamp(10px, 1.5vw, 15px);
+}
+.sponsor-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.sponsor-list.show {
+    max-height: 1000px; /* Arbitrary large value to allow for the entire list to be visible */
+}
+
+/*Praktisk*/
+.praktisk{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(15px, 2vw, 30px);
+    max-width: 1200px;
+}
+.praktisk h1{
+    margin-bottom: -2%;
+    margin-top: 5%;
+    text-align: center;
+}
+.praktisk ul{
+    margin-left: 4%;
+    margin-top: -2%;
+}
+.praktisk .oppgaver p:nth-of-type(1) {
+    font-weight: bold;
+}
+.oppgaver{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.oppgaver img{
+    width: 30%;
+    margin-right: 10%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 10%;
+}
+.oppgaver div{
+    margin-left: 2%;
+}
+@media (min-width: 1400px) {
+    .praktisk ul{
+        margin-left: 4%;
+        margin-top: -1%;
+    }
+
+
+}
+@media (max-width: 600px) {
+    .praktisk ul{
+        margin-left: 2%;
+        margin-top: -3%;
+    }
+    .praktisk ul li{
+        margin-top: -2%;
+    }
+    .oppgaver {
+        display: flex;
+        flex-direction: column;
+    }
+    .oppgaver div {
+        order: 1;
+    }
+    .oppgaver img {
+        order: 2;
+        margin-top: 1%; /* Adjust this value as needed */
+        width: 100%;
+        height: 40vw;
+    }
+}
+
+/*Fosterhjem*/
+.fosterhjem{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(15px, 2vw, 30px);
+    max-width: 1200px;
+}
+.fosterhjem h1{
+    margin-bottom: -1%;
+    margin-top: 5%;
+    text-align: center;
+}
+.foster_h{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.foster_h img{
+    margin-left: 1%;
+    width:30%;
+    margin-top: 3%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+@media (max-width: 600px) {
+    .foster_h{
+        display: flex;
+        flex-direction: column;
+    }
+    .foster_h div {
+        order: 1;
+        text-align: center;
+    }
+    .foster_h img {
+        order: 2;
+        margin-top: 0%; 
+        width: 80%;
+        height: 40vw;
+        object-position: center 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Håndarbeid*/
+.hånderbeid{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(15px, 2vw, 30px);
+    max-width: 1200px;
+}
+.hånderbeid h1{
+    margin-bottom: -2%;
+    margin-top: 5%;
+    text-align: center;
+}
+.hånd_a{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.hånd_a img{
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.hånd_a div{
+    margin-left: 2%;
+}
+@media (max-width: 600px) {
+    .hånd_a{
+        display: flex;
+        flex-direction: column;
+    }
+    .hånd_a div {
+        order: 1;
+        text-align: center;
+    }
+    .hånd_a img {
+        order: 2;
+        margin-top: 0%; 
+        width: 100%;
+        height: 40vw;
+        object-position: center 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Sponsorer*/
+.sponsor{
+    font-size: clamp(12px,4vw,20px);
+    text-align: center;
+}
+.sponsor h1{
+    margin-bottom:0;
+    margin-top: 5%;
+}
+.sponsorer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px; /* Adjust based on your container width requirement */
+    margin: 0 auto;
+    padding: 10px;
+}
+.sponsorer img {
+    max-width: 20%; /* Adjust percentage as needed */
+    flex: 1 0 20%; /* Adjust to fit four images in a row */
+    height: auto;
+    margin: 5px;
+    box-sizing: border-box;
+}
+@media (min-width: 1400px) {
+    .sponsorer {
+        flex-wrap: nowrap;
+        max-width: 75%; /* Optional: container expands to full width */
+        margin-left: 8%;
+        margin-right: auto;
+    }
+    .sponsorer img {
+        max-width: 12.5%; /* Adjust percentage to fit all images in one row */
+        flex: 1 0 12.5%; /* Adjust to fit eight images in a row */
+    }
+}
+
+
+

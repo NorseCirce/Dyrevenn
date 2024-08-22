@@ -1,0 +1,131 @@
+:root { 
+    --detail: Black;
+    --detail2: black;
+    --main1: #e5e4e3;
+    --main2: #73151b;
+    --main3: #231862;
+}
+
+
+/*Kort info*/
+.kort_info{
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+    overflow: hidden;
+    height: 300px;
+}
+.kort_info img{
+    width: 115%;
+    margin-left: -15%;
+    margin-top: -5%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%);
+    background-position: bottom left;
+    object-fit: cover;
+    max-height: 500px;
+}
+.kort_info .text {
+    width: 60%;
+    max-width: 900px;
+    position: absolute;
+    top: clamp(100px, 50%, 600px);
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: var(--main3); /* Adjust color based on your image */
+    font-family: Arial, sans-serif;
+    padding: 10px; /* Optional: space around the text */
+    text-shadow:5px 5px 20px #ffffff, -5px -5px 20px #ffffff , 5px -5px 20px #fff, -5px 5px 20px #ffffff;
+
+}
+.kort_info .text p{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: clamp(12px, 2.5vw, 20px);
+}
+.kort_info .text p:nth-of-type(1) {
+ color: var(--main2);
+ font-size: clamp(1px, 4vw, 30px);
+ font-weight: bold;
+}
+.kort_info .text p:nth-of-type(4) {
+    color: var(--main3);
+    text-align: right;
+   }
+@media (max-width: 600px){
+    .kort_info{
+        height: 170px;
+    }
+    .kort_info img{
+        max-height: 300px;
+    }
+    .kort_info .text {
+        width: 80%;
+        left: 55%;
+        top:45%;
+    }
+    .kort_info .text p{
+        margin-left: -10%;
+    }
+    
+}
+@media (min-width: 1400px){
+    .kort_info img{
+        max-height: 400px;
+    }
+    .kort_info .text {
+        width: 40%;
+        left: 75%;
+    }
+}
+
+
+
+/*Kontakt*/
+.kontakt {
+    width: 90%;
+    margin: 2% auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+.kontakt .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.kontakt .section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 1%;
+    border: 2px solid var(--main3);
+    border-radius: 5px;
+    background-color: #ffffff77;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.kontakt .section h2 {
+    color: #333;
+    margin-bottom: 1.1vw;
+    font-size: clamp(15px, 3.5vw, 50px);
+}
+.kontakt p {
+    font-size: clamp(5px, 3vw, 40px);
+    color: var(--main3);
+    line-height: 1.1;
+    font-weight: bold;
+    margin-top: 1vw;
+
+}
+.kontakt a {
+    text-decoration: none;
+    color: var(--main3);
+}
+.kontakt a:hover {
+    text-decoration: underline;
+}
+#map {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+

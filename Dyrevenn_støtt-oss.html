@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrevenn Vestfold</title>
+    <link rel="stylesheet" href="Dyrevenn_støtt-oss.css">
+    <link rel="stylesheet" href="Dyrevenn_frame.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+<div class="wrapper" data-max-bottom="0.3">
+    <header>
+        <div class="header-content">
+            <p>
+                <a href="https://www.facebook.com/Dyrevenn.Vestfold" class="header_name"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/dyrevenn_vestfold/" class="header_name"><i class="fab fa-instagram"></i></a>
+            </p>
+            <p>
+                <a href="tel:453 82 272"><i class="material-icons">phone</i> 453 82 272</a>
+            </p>
+            <p>
+                <a href="mailto:post@dyrevennvestfold.no"><i class="material-icons">&#9993;</i> post@dyrevennvestfold.no</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="top">
+        <a class="top_name" href="Dyrevenn_homepage.html">Dyrevenn<br>Vestfold</a>
+        <a href="Dyrevenn_homepage.html"><img src="Images/logo.png" alt="Logo" class="top_logo"></a>
+        <div class="top_square_L"></div> 
+        <div class="top_square"></div>
+        <div class="top_square_R"></div>
+        <nav class="navbar">
+            <a href="#home"></a>
+            <div class="dropdown"> 
+                <button class="dropbtn">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="Dyrevenn_adopsjon.html">Adopsjon</a>
+                    <a href="Dyrevenn_fjernadopsjon.html">Fjernadopsjon</a>
+                    <a href="Dyrevenn_omplassering.html">Omplassering</a>
+                    <a href="Dyrevenn_memorial.html">Minneside</a>
+                    <a href="Dyrevenn_støtt-oss.html">Støtt oss</a>
+                    <a href="Dyrevenn_om-oss.html">Om oss</a>
+                    <a href="Dyrevenn_kontakt.html">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <main id="content">
+
+        <section class="støtt_oss"><h1>Støtt oss</h1></section>       
+        <section class="økonomisk">
+            <div class="text">
+                <h1>Økonomisk støtte</h1>
+                <p>Det koster å hjelpe dyr, og vi er helt avhengig av privat, økonomisk støtte for å få driften til å gå rundt.<br>Den største inntektskilden vår er Grasrotandelen fra Norsk Tipping. Hvis du tipper eller spiller f.eks. Lotto, tar vi gjerne imot Grasrotandelen din!</p>
+                <ul>
+                    <li><a>Innsamlinger på Facebook:</a> Et godt tilskudd til driften vår. I forbindelse med fødselsdager er det noen som lager en Facebookinnsamling, og det er vi svært takknemlige for.</li>
+                    <li><a>Fjernadopsjon:</a> Du kan lese mer om det <a class="here" href="Dyrevenn_fjernadopsjon.html">her</a>.</li>
+                    <li><a>Månedlig bidrag:</a> Noen velger å støtte oss med et fast beløp hver måned. Stort eller lite, alt er like velkomment!</li>
+                    <li><a>Kalendere og julekort:</a> Hvert år lager vi en kalender og julekort med bilder av katter som vi har tatt hånd om i året som gikk. Disse blir lagt ut for salg.</li>
+                    <li><a>Enkle donasjoner:</a> Skulle du plutselig ha noen kroner til overs som du ønsker å donere til oss, tar vi gjerne imot! Vipps til 570826 eller overfør til konto 2480 25 14871.</li>
+                    <li><a>Bli medlem:</a> Dyrevenn Vestfold er en medlemsorganisasjon, og for den beskjedne sum av kr 300,- pr. år kan du støtte driften vår. Du kan lese mer om medlemskap her:</li>
+                </ul>
+            </div>
+            <img src="Images/20240716_183004.jpg">
+        </section>
+        <section class="hjelp_oss">
+            <div class="metoder_hjelp">
+                <div class="vipps" onclick="openVipps()">
+                    <img src="Images/vipps_logo.png" alt="Vipps Logo" id="vipps">
+                    <p>Vårt vippsnummer er: 570826</p>
+                    <img src="Images/qr_code.png" alt="QR Code" id="qrCode" style="cursor:pointer;" onclick="openModal()">
+                    <p>Støtt oss enkelt og raskt med Vipps</p>
+                </div>
+                <div class="grasrotandelen">
+                    <img src="Images/grasrotandel_logo.png" alt="Grasrotandelen Logo" id="grasrot">
+                    <p>Grasrotandelen er vår viktigste inntektskilde, så sett gjerne Dyrevenn Vestfold som din mottaker</p>
+                </div>
+                <div class="facebook_event">
+                    <img src="Images/facebook_logo.png" alt="Facebook Logo" id="facebook">
+                    <p>I forbindelse med fødselsdager er det mange som velger å arrangere en innsamling til støtte for Dyrevenn Vestfold</p>
+                </div>
+            </div>
+        </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <img src="Images/qr_code.png" alt="QR Code">
+            </div>
+        </div><!-- The Modal -->
+
+        <section class="medlem">
+            <h1>Medlem i Dyrevenn Vestfold</h1>
+            <div class="medlemer">
+                <div class="text">
+                <p>Å være medlem i Dyrevenn Vestfold koster kr 300,- pr. år. Betaler du med Vipps, legger du til kr 25 for gebyr. De fleste medlemmer er passive og betaler kun den årlige avgiften. Uansett aktivitetsnivå gir vi noe tilbake til alle våre medlemmer!</p>
+                <p>Som medlem får du:</p>
+                <ul>
+                    <li>Adgang til Årsmøtet, vår høyeste beslutningsorgan.</li>
+                    <li>Invitasjoner til Åpen Dag, dugnader og vårt hyggelige julemøte.</li>
+                    <li id="toggle-sponsor-list">
+                        Rabatter hos våre sponsorer: <span class="toggle-btn">▼</span>
+                        <ul class="sponsor-list">
+                            <li>Strikkebua i Sandefjord: 15% rabatt på garn</li>
+                            <li>Buddy i Sandefjord: 10% rabatt på de fleste varer (Ikke kampanje)</li>
+                            <li>Microbakeriet i Sandefjord: 20% rabatt på bakervarer</li>
+                            <li>Pia Interflora i Sandefjord: 10% rabatt på blomster</li>
+                            <li>Hjortegården i Stokke: 5% rabatt på hjortekjøtt</li>
+                            <li>Ny Energi for kropp og sjel: 10% rabatt på behandlinger</li>
+                            <li>Helsepunktet, Sandefjord: 10% rabatt på behandlinger</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>For å få rabattene, betal medlemsavgiften og hent ditt medlemsbevis på Miabua, hjelpesenteret vårt i Roveveien 174, Sandefjord. Medlemsbeviset er gyldig fra mars ett år til april neste år.</p>
+                </div>
+                <img src="Images/20240730_183420.jpg">
+            </div>
+        </section>
+        
+        <section class="praktisk">
+            <h1>Praktiske oppgaver</h1>
+            <p>Vil du jobbe med oss? Vi trenger frivillige til hjelpesenteret Miabua i Sandefjord!</p>
+    <div class="oppgaver">
+        <img src="Images/20240730_174607.jpg">
+        <div>
+            <p>Oppgavene inkluderer:</p>
+            <ul>
+                <li>Vasking og rydding</li>
+                <li>Tømme kattekasser</li>
+                <li>Sosialisering av dyrene</li>
+                <li>Påfylling av mat og vann</li>
+                <li>Rengjøring av luftegårdene</li>
+                <li>Lek og kos med kattene</li>
+            </ul>
+        <p>Du gjør kun oppgaver du føler deg komfortabel med. Vi trenger også sjåfører til å frakte katter og utstyr til dyrlegen eller fosterhjem. Og hvis du tåler litt vær og vind, trenger vi folk til å sette opp og passe feller for innfanging av katter.</p>
+        </div>
+    </div>
+        </section>
+
+        <section class="fosterhjem">
+            <h1>Fosterhjem</h1>
+            <div class="foster_h">
+                <div>
+                <p>Ønsker du å jobbe hjemmefra? Vi trenger fosterhjem!</p>
+                <p>Dyrevenn Vestfold får mange henvendelser om katter, men vi har begrenset plass på hjelpesenteret. Derfor trenger vi deg som kan gi midlertidige hjem til katter i nød. Vi tilpasser katten til ditt hjem og dine ønsker – enten det er en redd katt som trenger sosialisering, en voksen og rolig pus, eller en kattemor med unger.</p>
+                <p>Vi dekker de fleste eller alle utgifter. Din oppgave er å sørge for at katten trives og møte potensielle adoptanter.</p>
+                <p>Interessert? Kontakt oss for mer informasjon!</p>
+                </div>
+                <img src="Images/20240723_192123.jpg">
+            </div>
+        </section>
+
+        <section class="hånderbeid">
+            <h1>Håndarbeid</h1>
+            <div class="hånd_a">
+            <img src="Images/20230523_180804.jpg">
+            <div>    
+                <p>Er du glad i håndarbeid? Ditt talent kan glede våre katter!</p>
+                <p>Vår gruppe, Kreative Dyrevenner, strikker og hekler små tepper og "mus" til dyrene. Vi trenger mange tepper hvert år til hyller, senger, klatrestativer, luftegårder og fosterhjem. Når en katt adopteres, får den med seg et teppe og en strikkemus med kjent lukt, som hjelper den å føle seg trygg i sitt nye hjem.</p>
+            </div> 
+            </div>
+        </section>
+
+        <section class="sponsor">
+            <h1>Våre flotte sponsorer</h1>
+            <div class="sponsorer">
+                <img src="Images/strikkebua.png">
+                <img src="Images/hjortegården.jpg">
+                <img src="Images/kropp_sjel.jpg">
+                <img src="Images/skousen.png">            
+                <img src="Images/pels_pote.png">
+                <img src="Images/PIA.png">
+                <img src="Images/Bakeriet.jpg">
+                <img src="Images/helsepunktet.jpg">     
+            </div>
+        </section>
+    
+        <section class="bottom">
+            <img class="image_bottom" src="Images/cat1.png">
+            <div class="bottom-content">
+                <div class="info">
+                    <a href="https://www.google.com/maps/place/Roveveien+174,+3233+Sandefjord/@59.1675245,10.2944841,17z/data=!3m1!4b1!4m6!3m5!1s0x4646b9ee8cdee1eb:0x12a91f2526f001c!8m2!3d59.1675245!4d10.297059!16s%2Fg%2F11qn0gwj80?entry=ttu">
+                        <i class="material-icons">&#xe55f;</i> Roveveien 174, Sandefjord
+                    </a><br>
+                    <a href="tel:453 82 272">
+                        <i class="material-icons">phone</i> 453 82 272
+                    </a><br>
+                    <a href="mailto:post@dyrevennvestfold.no">
+                        <i class="material-icons">&#9993;</i> post@dyrevennvestfold.no
+                    </a><br>
+                </div>
+        
+                <div class="open_times">
+                    <a>Åpningstider</a><br>
+                    <a>Tirsdag: <span>17:00 – 19:00</span></a><br>
+                    <a>Torsdag: <span>17:00 – 19:00</span></a>
+                </div>
+        
+                <div class="web_pages">
+                    <a href="https://www.facebook.com/Dyrevenn.Vestfold">
+                        <img src="Images/facebook.png" alt="Facebook logo, click to go to our Facebook page">
+                    </a>
+                    <a href="https://www.instagram.com/dyrevenn_vestfold/">
+                        <img src="Images/instagram.png" alt="Instagram logo, click to go to our Instagram page">
+                    </a>
+                    <div class="bottom_dropdown"> 
+                        <img src="Images/dropdown.png" alt="Menu" class="bottom_dropbtn">
+                        <div class="bottom_dropdown-content">
+                            <a href="Dyrevenn_adopsjon.html">Adopsjon</a>
+                            <a href="Dyrevenn_fjernadopsjon.html">Fjernadopsjon</a>
+                            <a href="Dyrevenn_omplassering.html">Omplassering</a>
+                            <a href="Dyrevenn_memorial.html">Minneside</a>
+                            <a href="Dyrevenn_støtt-oss.html">Støtt oss</a>
+                            <a href="Dyrevenn_om-oss.html">Om oss</a>
+                            <a href="Dyrevenn_kontakt.html">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div> 
+            <div class="bottom_square_L"></div> 
+            <div class="bottom_square_R"></div>
+        </section>
+
+
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p></p>
+            <p>&#169; Norse_Circe 2024.</p>
+            <p></p>
+        </div>    
+    </footer>
+</div>
+
+<button id="toTopBtn" onclick="scrollToTop()"><img src="Images/Paw.png"><a>Top</a></button>
+
+<script src="Dyrevenn_støtt-oss.js"></script>
+<script src="Dyrevenn_frame.js"></script>
+</body>
+</html>

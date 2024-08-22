@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Information</title>
+    <link rel="stylesheet" href="Dyrevenn_cats.css">
+    <link href="https://unpkg.com/cropperjs/dist/cropper.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/cropperjs"></script>
+    <script src="https://unpkg.com/idb@5.0.4/build/iife/index-min.js"></script>
+</head>
+<body>
+    <a href="Dyrevenn_homepage.html">
+        <img src="Images/logo_transparent.png" alt="Logo" id="logo">
+    </a>
+
+    <h1>Cat Information</h1>
+    <form id="cat-form">
+        <input type="hidden" id="cat-index" name="cat-index">
+        <div id="edit-indicator" style="display: none;">
+            <h2>Editing Cat: <span id="edit-cat-name"></span></h2>
+        </div>
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="color">Farge:</label>
+        <input type="text" id="color" name="color" required><br><br>
+
+        <label for="gender">Kjønn:</label>
+        <select id="gender" name="gender" required>
+            <option value=""></option>
+            <option value="Gutt">Gutt</option>
+            <option value="Jente">Jente</option>
+        </select><br><br>
+
+        <div class="horizontal-group">
+            <div class="horizontal-item">
+                <label for="age">Alder:</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="horizontal-item">
+                <label for="birthdate">Fødsels dato:</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+            <div class="horizontal-item">
+                <label for="uncertain-age">Alder usikker:</label>
+                <input type="checkbox" id="uncertain-age" name="uncertain-age">
+            </div>
+        </div><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="">---</option>
+            <option value="Adoptert">Adoptert</option>
+            <option value="Reservert">Reservert</option>
+            <option value="Adoptivsklar">Adoptivsklar</option>
+            <option value="Fjernadopsjon">Fjernadopsjon</option>
+            <option value="Redd">Redd</option>
+            <option value="Venter vaksinasjon/Kastrering">Venter vaksinasjon/Kastrering</option>
+            <option value="Syk">Syk</option>
+            <option value="Avdød">Avdød</option>
+        </select><br><br>
+
+        <div id="location-container" style="display: none;">
+            <label for="where">Hvor:</label>
+            <select id="where" name="where">
+                <option value="Miabua">Miabua</option>
+                <option value="Fosterhjem">Fosterhjem</option>
+            </select><br><br>
+
+            <div id="city-container" style="display: none;">
+                <label for="city">By:</label>
+                <input type="text" id="city" name="city"><br><br>
+            </div>
+        </div>
+
+        <div id="deceased-info" style="display: none;">
+            <label for="date">Dato:</label>
+            <input type="date" id="date" name="date"><br><br>
+        </div>
+
+        <div id="adopted-info" style="display: none;">
+            <label for="adopted-date">Adoptert Dato:</label>
+            <input type="date" id="adopted-date" name="adopted-date"><br><br>
+            <label for="new-owner">Ny Eier:</label>
+            <input type="text" id="new-owner" name="new-owner"><br><br>
+        </div>
+
+        <label for="image">Bilde:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+        <label for="notes">Notater:</label>
+        <textarea id="notes" name="notes"></textarea><br><br>
+
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+
+    <hr>
+
+    <h2>Cats</h2>
+    <label for="sort">Sorter etter:</label>
+    <select id="sort" name="sort">
+        <option value="name">Navn</option>
+        <option value="birthdate">Fødsels dato</option>
+    </select><br><br>
+
+    <label for="filter-gender">Filtrer etter kjønn:</label>
+    <input type="checkbox" id="filter-male" name="filter-gender" value="Gutt"> Gutt
+    <input type="checkbox" id="filter-female" name="filter-gender" value="Jente"> Jente<br><br>
+
+    <label for="filter-status">Filtrer etter status:</label>
+    <select id="filter-status" name="filter-status">
+        <option value="">Alle</option>
+        <option value="Adoptert">Adoptert</option>
+        <option value="Reservert">Reservert</option>
+        <option value="Adoptivsklar">Adoptivsklar</option>
+        <option value="Fjernadopsjon">Fjernadopsjon</option>
+        <option value="Redd">Redd</option>
+        <option value="Venter vaksinasjon/Kastrering">Venter vaksinasjon/Kastrering</option>
+        <option value="Syk">Syk</option>
+        <option value="Avdød">Avdød</option>
+    </select><br><br>    
+    <label for="search-name">Søk etter navn:</label>
+    <input type="text" id="search-name" name="search-name" placeholder="Søk etter navn"><br><br>
+
+    <div id="cat-display" class="cat-info cat-container horizontal-scroll"></div>
+    
+    <hr>
+
+    <h2>Fjernadopsjons katter</h2>
+    <div id="remote-adoption-cat-display" class="cat-info cat-container horizontal-scroll"></div>
+
+    <hr>
+
+    <h2>Adopterte katter</h2>
+    <div id="adopted-cat-display" class="cat-info"></div>
+    
+    <hr>
+
+    <h2>Avdøde katter</h2>
+    <div id="deceased-cat-display" class="cat-info cat-container"></div>
+    
+    <hr>
+
+    <!-- Cropper Modal -->
+    <div id="cropperModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <img id="imageToCrop" style="max-width: 100%;">
+            </div>
+            <button id="cropButton">Crop</button>
+        </div>
+    </div>
+
+    <!-- Full Image Modal -->
+    <div id="fullImageModal" class="modal">
+        <div class="modal-content" style="width: 50%; height: auto;">
+            <span class="close-full-image">&times;</span>
+            <img id="fullImage" style="max-width: 100%;">
+        </div>
+    </div>
+
+    <script src="Dyrevenn_cats.js"></script>
+</body>
+</html>
